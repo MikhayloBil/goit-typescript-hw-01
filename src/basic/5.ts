@@ -8,17 +8,11 @@ enum DayOfWeek {
   Sunday,
 }
 
-type IsWeekend = Record<DayOfWeek, boolean>;
-
-const isWeekend: IsWeekend = {
-  [DayOfWeek.Monday]: true,
-  [DayOfWeek.Tuesday]: true,
-  [DayOfWeek.Wednesday]: true,
-  [DayOfWeek.Thursday]: true,
-  [DayOfWeek.Friday]: true,
-  [DayOfWeek.Saturday]: false,
-  [DayOfWeek.Sunday]: false,
+const isWeekend = (day: DayOfWeek): boolean => {
+  return day === DayOfWeek.Saturday || day === DayOfWeek.Sunday;
 };
-console.log(isWeekend);
+
+console.log(isWeekend(DayOfWeek.Monday)); // false
+console.log(isWeekend(DayOfWeek.Saturday)); // true
 
 export {};

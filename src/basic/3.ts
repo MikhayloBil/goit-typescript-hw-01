@@ -1,11 +1,13 @@
+//Задача 1
 let mixedType: string | number;
 
 mixedType = "Tom";
 mixedType = 10;
 
-type enableOrdisable = 1 | 2;
+//Задача 2
+type enableOrdisable = "enable" | "disable";
 let value: enableOrdisable;
-value = 1;
-value = 2;
+value = "enable";
+value = "disable";
 
 export {};
